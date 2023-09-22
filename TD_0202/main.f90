@@ -10,7 +10,7 @@
 
 program main
     implicit none
-    real :: x,a,b,ans
+    real :: x,a,b
     a = 8.813
     b = 721.5
     read*, x
@@ -23,5 +23,4 @@ program main
         write(*,*) ((x+(3/2))*sqrt((a*(x**2) + b*sqrt(x))+5*a*x)/(3*(x**2) +4*b))
     endif cond
     
-
 end program main
