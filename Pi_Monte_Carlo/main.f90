@@ -1,9 +1,14 @@
-! ---------------------------------
-! µFortran auto generated program.
-! Created for : Diego
-! Date : Sat Sep 23 15:21:51 CEST 2023
-! ---------------------------------
-program CalculPi
+! ---------------------------------
+
+! µFortran auto generated program.
+
+! Created for : Diego
+
+! Date : Sat Sep 23 15:21:51 CEST 2023
+
+! ---------------------------------
+
+program main
   implicit none
   real :: r(10000000, 2)
   real :: M, d
@@ -28,6 +33,6 @@ program CalculPi
   print *, 4.0 * (M / real(size(r, 1)))
 
   deallocate(seed)
-end program CalculPi
+end program main
 
 
