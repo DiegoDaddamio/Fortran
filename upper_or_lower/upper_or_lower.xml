@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="upper_or_lower">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="upper_or_lower"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+  </sources>
+  <externals/>
+  <author>ddaddami</author>
+</project>
