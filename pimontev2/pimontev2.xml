@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="pimontev2">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="pimontev2"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+  </sources>
+  <externals/>
+  <author>ddaddami</author>
+</project>
