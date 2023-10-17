@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="day_guess">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="day_guess"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+    <file relativePath="mylib.f90"/>
+    <file relativePath="changelog.txt"/>
+  </sources>
+  <externals/>
+  <author>Diego</author>
+</project>
