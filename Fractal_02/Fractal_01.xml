@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Fractal_01">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="Fractal_01"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+    <file relativePath="ppmdraw.f90"/>
+    <file relativePath="mylib.f90"/>
+  </sources>
+  <externals/>
+  <author>Diego</author>
+</project>
