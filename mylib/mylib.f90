@@ -54,6 +54,18 @@ module mylib
         close (unit =1)
     end subroutine ppmd
 
+    subroutine txtmatrix(matrix,txt)
+        integer, dimension(:,:), allocatable :: matrix
+        integer :: lig, col
+        character(*) :: txt
+        
+        open(unit=1, file=txt, action="read")
+        read (1,*) lig, col
+        allocate (matrix(lig,col))
+        read (1,*) matrix
+        close (unit =1)
+    end subroutine txtmatrix
+
     subroutine format_matrix_int(matrix,txt)
         integer :: matrix(:,:)
         integer :: m, n, mx, lg
