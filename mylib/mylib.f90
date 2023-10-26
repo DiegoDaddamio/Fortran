@@ -54,17 +54,17 @@ module mylib
         close (unit =1)
     end subroutine ppmd
 
-    subroutine txtmatrix(matrix,txt)
-        integer, dimension(:,:), allocatable :: matrix
+    subroutine txtdata(matrix,txt)
+        real, dimension(:,:), allocatable :: matrix
         integer :: lig, col
         character(*) :: txt
-        
         open(unit=1, file=txt, action="read")
         read (1,*) lig, col
-        allocate (matrix(lig,col))
+        allocate (matrix(col,lig))
         read (1,*) matrix
         close (unit =1)
-    end subroutine txtmatrix
+        matrix = transpose(matrix)
+    end subroutine txtdata
 
     subroutine format_matrix_int(matrix,txt)
         integer :: matrix(:,:)
