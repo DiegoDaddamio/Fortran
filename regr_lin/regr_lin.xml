@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="regr_lin">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="regr_lin"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+    <file relativePath="mylib.f90"/>
+    <file relativePath="changelog.txt"/>
+  </sources>
+  <externals/>
+  <author>ddaddami</author>
+</project>
