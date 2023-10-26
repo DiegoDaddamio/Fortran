@@ -66,6 +66,28 @@ module mylib
         matrix = transpose(matrix)
     end subroutine txtdata
 
+    subroutine reg_op(pts,h)
+        real :: pts(:,:)
+        real :: h(:)
+        real :: a, b, Sy = 0, Sxy = 0, Sx = 0, Sxx = 0, S, D
+        
+        do i = 1, size(pts,1)
+            Sy = Sy + (pts(i,2)/(h(i)**2))
+            Sx = Sx + (pts(i,1)/(h(i)**2))
+            Sxy = Sxy + (pts(i,1)*pts(i,2)/(h(i)**2))
+            Sxx = Sxx + (pts(i,1)**2/(h(i)**2))
+            S = S + (1/(h(i)**2))
+        enddo
+        D = Sx**2 - S*Sxx
+        a = (Sx*Sy - S*Sxy)/ D
+        b = (Sx*Sxy - Sxx*Sy)/ D
+        if (b == -0)then
+            b = 0.0
+        endif
+        write(*,"(A,f6.4,A,f6.4)") "f(x) = ",a," x +",b
+
+    end subroutine reg_op
+
     subroutine format_matrix_int(matrix,txt)
         integer :: matrix(:,:)
         integer :: m, n, mx, lg
