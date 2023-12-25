@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="NR_Gauss">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="NR_Gauss"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+    <file relativePath="libRNG.f90"/>
+    <file relativePath="changelog.txt"/>
+  </sources>
+  <externals/>
+  <author>Diego</author>
+</project>
