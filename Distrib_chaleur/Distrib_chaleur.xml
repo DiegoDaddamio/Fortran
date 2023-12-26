@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Distrib_chaleur">
+  <compilation gfortranBuildPath="bin/" gfortranCommand="gfortran" gfortranDumpLog="false" gfortranFlags="-o" gfortranTarget="Distrib_chaleur"/>
+  <execution executionPath="./" inputArguments=""/>
+  <sources>
+    <file relativePath="main.f90"/>
+    <file relativePath="lib.f90"/>
+    <file relativePath="changelog.txt"/>
+  </sources>
+  <externals/>
+  <author>Diego</author>
+</project>
