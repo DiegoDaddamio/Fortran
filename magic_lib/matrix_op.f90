@@ -1,147 +1,40 @@
 module matrix_op
     use basic
-
-
     implicit none
-
     contains
-
-
-
     subroutine format_matrix_int(matrix,txt)
-
-
-
             real :: matrix(:,:)
-
-
-
             integer :: m, n
-
-
-
             character(*) :: txt
-
-
-
             matrix = int(matrix)
-
-
-
             m = size(matrix, 1)
-
-
-
             n = size(matrix, 2)
-
-
-
             write(txt,"(A,I0,A,I0,A)") "(",m,"(", n,"(I0, x),/))"
-
-
-
         end subroutine format_matrix_int
 
-
-
-        
-
-
-
     subroutine format_matrix_real(matrix,txt)
-
-
-
             real :: matrix(:,:)
-
-
-
             integer :: m, n
-
-
-
             character(*) :: txt
-
-
-
             m = size(matrix, 1)
-
-
-
             n = size(matrix, 2)
-
-
-
             write(txt,"(A,I0,A,I0,A)") "(", m, "(", n, "(f8.4, x),/))"
-
-
-
     end subroutine format_matrix_real
 
-
-
-
-
-
-
     subroutine export_matrix(matrix,txt)
-
-
-
         real :: matrix(:,:)
-
-
-
         integer :: lig, col, mx
-
-
-
         character(*) :: txt
-
-
-
         character(150) :: format_m
-
-
-
-        
-
-
-
         lig = size(matrix,1)
-
-
-
         col = size(matrix,2)
-
-
-
         mx = maxval(matrix)
-
-
-
         open(unit=1, file=txt, action="write")
-
-
-
         if (index(txt,".ppm") > 0) then
-
-
-
             write (1,"(A2)") "P2"
-
-
-
             write (1,"(I0.4,x,I0.4)") lig, col
-
-
             write (1,"(I0)") mx
-
-
-
         else
-
-
              write (1,"(I0,x,I0)") lig, col
 
 
