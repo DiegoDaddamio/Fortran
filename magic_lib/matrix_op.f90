@@ -36,145 +36,43 @@ module matrix_op
             write (1,"(I0)") mx
         else
              write (1,"(I0,x,I0)") lig, col
-
-
         endif
-
-
-
-        
-
-
-
         if ( detect_real_matrix(matrix) ) then
-
-
-
             call format_matrix_real(matrix,format_m)
-
-
             write(1,format_m) real(matrix)
-
-
         else
-
-
-
             call format_matrix_int(matrix,format_m)
-
-
             write(1,format_m) int(matrix)
-
-
         endif
-
-
-
-        
-
-
-
         close (unit =1)
-
-
-
-    end subroutine export
-_matrix
-
-
-
-
-
-
+    end subroutine export_matrix
+    
     function size_matrix(text) result(ans)
-
-
         integer :: ans(2)
-
-
         character(*) :: text
-
-
         open(10,file = text)
-
-
         if (index(text,".ppm") > 0) then
-
-
             read (10,*)
-
-
         endif
-
-
         read(10,*) ans
-
-
         close(10)
-
-
     end function size_matrix
 
-
-    
-
-
-    
-
-
     function import_matrix(text) result(ans)
-
-
         integer :: size(2)
-
-
         real, allocatable :: ans(:,:)
-
-
         character(*) :: text
-
-
         size = size_matrix(text)
-
-
         allocate(ans(size(1),size(2)))
-
-
         open(10,file = text)
-
-
         if (index(text,".ppm") > 0) then
-
-
             read (10,*)
-
-
         endif
-
-
         read(10,*) size
-
-
         if (index(text,".ppm") > 0) then
-
-
             read(10,*)
-
-
         endif
-
-
         read(10,*) ans
-
-
         close(10)
-
-
     end function import_matrix
-
-
-
-
-
-
 end module
